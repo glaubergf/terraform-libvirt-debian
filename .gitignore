@@ -1,0 +1,9 @@
+## CONFIG .gitignore
+
+# Diretórios local
+.terraform*
+ansible-zabbix*
+
+# Arquivos local
+terraform.tfstate*
+.terraform.lock.hcl
