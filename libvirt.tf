@@ -37,7 +37,7 @@
 
 provider "libvirt" {
   uri = "qemu:///system"
-  #uri = "qemu+ssh://root@192.168.122.100/system"
+  #uri = "qemu+ssh://root@192.168.121.200/system"
 }
 
 resource "libvirt_pool" "debian" {
@@ -57,7 +57,7 @@ resource "libvirt_volume" "debian-qcow2" {
   name           = "debian-qcow2"
   base_volume_id = libvirt_volume.debian-base.id
   pool           = libvirt_pool.debian.name
-  size           = 10737418240 # 10 GiB set in bytes - 10³
+  size           = var.vm_vol_size.size
 }
 
 data "template_file" "user_data" {
@@ -97,9 +97,8 @@ resource "libvirt_domain" "domain-debian" {
     network_name   = "libvirt"
     wait_for_lease = true
     hostname       = var.vm_hostname
-    #addresses      = var.vm_ip
-    addresses = ["192.168.121.200"]
-    mac       = "52:54:00:0E:64:AA"
+    addresses      = var.vm_ip
+    mac            = var.vm_mac.mac
   }
 
   console {
@@ -125,8 +124,8 @@ resource "libvirt_domain" "domain-debian" {
     user                = var.ssh_username
     host                = libvirt_domain.domain-debian.network_interface[0].addresses[0]
     private_key         = file(var.ssh_private_key)
-    bastion_host        = "tf-kvm-zabbix"
-    bastion_user        = "zabbix"
+    bastion_host        = var.vm_hostname
+    bastion_user        = var.vm_user
     bastion_private_key = file("~/.ssh/id_rsa")
     timeout             = "1m"
   }
