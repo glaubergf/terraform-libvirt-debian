@@ -8,8 +8,8 @@ bootcmd:
   - hostname tf-kvm-zabbix
 
 runcmd:
-  - [ ls, -l, / ]
-  - [ sh, -xc, "echo $(date) ': hello world!'" ]
+  - apt-get --yes upgrade
+  - apt-get --yes install 
 
 ssh_pwauth: true
 
@@ -31,16 +31,20 @@ users:
     ssh-authorized-keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDGjZwb+uHG5afSHZ6RUSZ4Ub0SfDFh3Sn28Wwv2BNEiBgl0ex1ENIcX6H4SU+FHpOMosQIdtNoylqCStuKi1heXZ1m4cufFBa4dVfkfHpkDiMCZbKfDofZVLiKBXBuQhG08H+ZXsuExKIGnyl1to+0fDbTger7EdPaP9rxv/s0D/Jf/FfaFVCJdsvl2JxQgHQcTObt39kZ+gYuXtXhENYSG32IqSuz+wJHR3Rj4sZfIZSHNEr7xkrgxC0X/wFqyAbmbf2/iMtEpmHF80GoZa2LdHCd6IfoOC8GJTj/O6UeoNBwR4TqTCoY/om6O31voRd1CWmSLaGjis9X0ypQcllW4xq4MB7MRvpZ1UArLAIm7BtuveXB9zFvYfKt++AgZra+GAC05Dz5A1tuPkHJWXIgV8GRUa2eLe3RHvljeXGPznctEJuVW/xk9OvYl4VMUiRqxLqaTteMqozxjddApQKXZDAH5p4m90Ezh21cbDzaYe4MQd2C1dVtIGV8/8p/6ul51KhEma1iWcJg/1436CT7Rde4l8mmaOzZbPQupMr1r3vMmFdQ6eEbfjqdyiv5R9RGf9ecqmU+ygGAwI75sQ2PAZ5wBqV6COjHpIQ4kNkuvAHAJwolP8fHvdGb5GfhjAnLZJ6FgMjYKf5/P2nhXmvDBC+vlECgLEZtgvvaOKt2qw== Debian Desktop access host tf-kvm-zabbix
 
-#final_message: "The system is finally up, after $UPTIME seconds"
-
 packages:
   - python3
   - python2-minimal
   - cmatrix
   - ethstatus
   - s-tui
-  - sensors
+  - lm-sensors
   - neofetch
+  - dnsutils
+
 package_update: true
+
 package_upgrade: true
+
 #package_reboot_if_required: true
+
+#final_message: "The system is finally up, after $UPTIME seconds"
