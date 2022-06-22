@@ -1,0 +1,34 @@
+name: 'CI-CD Terraform'
+
+on:
+  #push:
+    #branches:
+    #- "main"
+  #pull_request:
+  
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+
+jobs:
+  terraform:
+    name: 'Terraform'
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Format
+      run: terraform fmt -check
+
+    - name: Terraform Plan
+      run: terraform plan -out plan -input=false
+      continue-on-error: false
+
+    - name: Terraform Apply
+      run: terraform apply "plan" 
