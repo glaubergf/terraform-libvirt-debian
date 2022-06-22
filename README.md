@@ -38,8 +38,6 @@ Dentro de cada bloco temos as configurações com o objetivo de:
       Gerenciar um recurso de domínio VM dentro da libvirt; e
       Gerenciar um disco ISO cloud-init que pode ser usado para personalizar um domínio durante a primeira inicialização.
 
--- [**Cloud-init**](https://cloudinit.readthedocs.io/en/latest/index.html)
-
 * **variable.tf** - A linguagem Terraform inclui alguns tipos de blocos para solicitar ou publicar valores nomeados.
 Um valor local atribui um nome a uma expressão, para que se possa usar o nome várias vezes em um módulo em vez de repetir a expressão.
 
@@ -47,15 +45,15 @@ Um valor local atribui um nome a uma expressão, para que se possa usar o nome v
 
 * **config/network_config.yml** - Esse formato de configuração de rede permite que os usuários personalizem as interfaces de rede de suas instâncias atribuindo configurações de sub-rede, rotas de criação de dispositivos virtuais (bonds, bridges, vlans) e configuração de DNS.
 
-* **config/cloud_init.yml** - Com o **cloud-config** é a maneira mais simples de realizar algumas coisas por meio de dados do usuário. Usando a sintaxe cloud-config, o usuário pode especificar certas coisas em um formato amigável.
+* **config/cloud_init.yml** - O [**cloud-init**](https://cloudinit.readthedocs.io/en/latest/index.html) é a maneira mais simples de realizar algumas tarefas por meio de dados do usuário. Usando a sintaxe *cloud-config*, o usuário pode especificar algumas coisas em um formato amigável.
 
-Essas coisas incluem:
+Isso inclue:
 
-      apt upgrade deve ser executado na primeira inicialização;
-      um espelho apt diferente deve ser usado;
-      fontes apt adicionais devem ser adicionadas;
-      certas chaves SSH devem ser importadas;
-      e muitos mais…
+      O apt upgrade para ser executado na primeira inicialização;
+      Um espelho apt diferente para ser usado;
+      Fontes apt adicionais para ser adicionadas;
+      Certas chaves SSH devem ser importadas;
+      E muitos mais…
 
 ## Aplicando o projeto
 
