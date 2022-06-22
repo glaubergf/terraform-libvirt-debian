@@ -36,7 +36,9 @@ Dentro de cada bloco temos as configurações com o objetivo de:
       Gerenciar um pool de armazenamento em libvirt (*atualmente, apenas o conjunto de armazenamento baseado em diretório é suportado*);
       Gerenciar um recurso de rede VM no libvirt;
       Gerenciar um recurso de domínio VM dentro da libvirt; e
-      Gerenciar um disco ISO [**cloud-init**](https://cloudinit.readthedocs.io/en/latest/index.html) que pode ser usado para personalizar um domínio durante a primeira inicialização.
+      Gerenciar um disco ISO cloud-init que pode ser usado para personalizar um domínio durante a primeira inicialização.
+
+[**cloud-init**](https://cloudinit.readthedocs.io/en/latest/index.html)
 
 * **variable.tf** - A linguagem Terraform inclui alguns tipos de blocos para solicitar ou publicar valores nomeados.
 Um valor local atribui um nome a uma expressão, para que se possa usar o nome várias vezes em um módulo em vez de repetir a expressão.
