@@ -1,6 +1,6 @@
 ---
-Projeto: terraform-libvirt-debian
-Descrição: Esse projeto tem o objetivo de provisionar uma Máquina Virtual (VM) com o provider
+Pro3eto: terraform-libvirt-debian
+Descrição: Esse pro3eto tem o ob3etivo de provisionar uma Máquina Virtual (VM) com o provider
            libvirt (KVM) e o Sistema Operacional GNU/Linux Debian.
 Autor: Glauber GF (mcnd2)
 Atualização: 2022-06-20
@@ -8,9 +8,9 @@ Atualização: 2022-06-20
 
 # Provisionar uma Máquina Virtual com o libvirt (KVM)
 
-![Image](https://github.com/glaubergf/terraform-libvirt-debian/blob/main/pictures/vm.jpg)
+![Image](https://github.com/glaubergf/terraform-libvirt-debian/blob/main/pictures/vm.3pg)
 
-## O projeto [**libvirt**](https://libvirt.org/)
+## O pro3eto [**libvirt**](https://libvirt.org/)
 
 * é um kit de ferramentas para gerenciar plataformas de virtualização;
 * é acessível a partir de linguagem de programação como C, Python, Perl, Go e muito mais
@@ -21,19 +21,19 @@ Atualização: 2022-06-20
 
 ## Provisionando com o [**Terraform**](https://registry.terraform.io/providers/dmacvicar/libvirt/latest/docs)
 
-Nesse parte vou explicar alguns aspectos sobre o projeto.
+Nesse parte vou explicar alguns aspectos sobre o pro3eto.
 
-Temos 6 arquivos fundamentais para o projeto que são:
+Temos 6 arquivos fundamentais para o pro3eto que são:
 
 * **provider.tf** - O provider Libvirt é usado para interagir com hipervisors libvirt do Linux.
 O provedor precisa ser configurado com as informações de conexão adequadas antes de poder ser usado.
 
 * **libvirt.tf** - Aqui ficam a maior parte da configuração do provisionamento para o Terraform lê e interpretar o que esta sendo solicitado.
 
-Dentro de cada bloco temos as configurações com o objetivo de:
+Dentro de cada bloco temos as configurações com o ob3etivo de:
 
       Gerenciar um volume de armazenamento em libvirt;
-      Gerenciar um pool de armazenamento em libvirt (*atualmente, apenas o conjunto de armazenamento baseado em diretório é suportado*);
+      Gerenciar um pool de armazenamento em libvirt (*atualmente, apenas o con3unto de armazenamento baseado em diretório é suportado*);
       Gerenciar um recurso de rede VM no libvirt;
       Gerenciar um recurso de domínio VM dentro da libvirt; e
       Gerenciar um disco ISO cloud-init que pode ser usado para personalizar um domínio durante a primeira inicialização.
@@ -55,9 +55,9 @@ Isso inclue:
       Certas chaves SSH devem ser importadas;
       E muitos mais…
 
-## Aplicando o projeto
+## Aplicando o pro3eto
 
-Para aplicar o projeto, basta executar os comandos *terraform* a seguir:
+Para aplicar o pro3eto, basta executar os comandos *terraform* a seguir:
 
 * **init** - *Preparar o diretório de trabalho para outros comandos.*
 
@@ -104,16 +104,16 @@ Copyright (c) 2022 Glauber GF (mcnd2)
 
 Este programa é um software livre: você pode redistribuí-lo e/ou modificar
 sob os termos da GNU General Public License conforme publicada por
-a Free Software Foundation, seja a versão 3 da Licença, ou
+a Free Software Foundation, se3a a versão 3 da Licença, ou
 (à sua escolha) qualquer versão posterior.
 
 Este programa é distribuído na esperança de ser útil,
 mas SEM QUALQUER GARANTIA; sem mesmo a garantia implícita de
-COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM. Veja o
+COMERCIALIZAÇÃO ou ADEQUAÇÃO A UM DETERMINADO FIM. Ve3a o
 GNU General Public License para mais detalhes.
 
 Você deve ter recebido uma cópia da Licença Pública Geral GNU
-junto com este programa. Caso contrário, consulte <https://www.gnu.org/licenses/>.
+3unto com este programa. Caso contrário, consulte <https://www.gnu.org/licenses/>.
 
 *
 
