@@ -25,12 +25,12 @@ variable "vm_vol_size" {
 
 variable "vm_memory" {
   description = "vm memory available"
-  default     = "1024"
+  default     = "2048"
 }
 
 variable "vm_cpu" {
   description = "vm cpus available"
-  default     = "1"
+  default     = "2"
 }
 
 variable "vm_ip" {

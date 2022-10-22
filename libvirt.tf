@@ -1,6 +1,6 @@
 /*NOTAS:
 
-  NOTA 1: Caso ha3a um erro similar como por exemplo:
+  NOTA 1: Caso haja um erro similar como por exemplo:
 
     Error: "...Could not open '/opt/kvm/pool1/debian-qcow2': Permission denied"
     Error: "error creating libvirt domain: internal error: process exited while connecting to monitor: ..."
@@ -13,7 +13,7 @@
 
   NOTA 2: Qual é o nome de usuário padrão nas imagens de nuvem do Debian?
 
-  O nome de usuário padrão difere com base no ambiente de nuvem. Por favor, ve3a https://wiki.debian.org/Cloud/SystemsComparison 
+  O nome de usuário padrão difere com base no ambiente de nuvem. Por favor, veja https://wiki.debian.org/Cloud/SystemsComparison 
   para mais informações. A autenticação é feita por meio da chave ssh instalada pelo cloud-init. 
   Não há senha. Essas contas podem se tornar root executando (sem necessidade de senha):
   $ sudo -i
@@ -22,7 +22,7 @@
   ==============
 
   NOTA 3: Video YouTube Terraform com KVM/Libvirt
-  Fonte: https://www.youtube.com/watch?v=u36PQD2n1vU&ab_channel=SavantTecnologia
+  Fonte: https://www.youtube.com/watch?v=uJ6PQD2n1vU&ab_channel=SavantTecnologia
 
   ==============
 
